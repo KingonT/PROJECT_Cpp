@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.inc": "cpp",
+        "string": "cpp"
+    },
+    "notebook.outline.showCodeCells": false
+}
