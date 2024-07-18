@@ -3,6 +3,9 @@
 #include  <unistd.h>
 #include  <iostream>
 
+MprpcConfig  mprpcApplication::fileconfig_;
+
+
 void ShowArgsHelp()
 {
         std::cout<<"Uage :\n ./bin  [-i] [config_file] \n";
@@ -17,9 +20,9 @@ void mprpcApplication::Init(int argc, char** argv)
                 exit(EXIT_FAILURE);
         }
 
-        int c = 0;
         std::string  confile;
-        while ( c=getopt(argc,argv,"i:")!= -1)
+        int c = 0;
+        while ( (c=getopt(argc,argv,"i:"))!= -1)
         {
                 switch (c)
                 {
@@ -36,7 +39,7 @@ void mprpcApplication::Init(int argc, char** argv)
         }
         
         // 加载配置文件
-
+        fileconfig_.LoadConfigFile(confile.c_str());
 }
 
 
@@ -44,4 +47,9 @@ mprpcApplication&  mprpcApplication::GetInstance()
 {
         static  mprpcApplication app;
         return app;
+}
+
+MprpcConfig& mprpcApplication::GetConfig()
+{
+        return fileconfig_;
 }

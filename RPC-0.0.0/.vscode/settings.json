@@ -1,7 +1,5 @@
 {
     "files.associations": {
-        "*.inc": "cpp",
-        "string": "cpp",
         "*.tcc": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
@@ -39,6 +37,7 @@
         "optional": "cpp",
         "random": "cpp",
         "ratio": "cpp",
+        "string": "cpp",
         "string_view": "cpp",
         "system_error": "cpp",
         "tuple": "cpp",
@@ -61,6 +60,5 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp"
-    },
-    "notebook.outline.showCodeCells": false
+    }
 }

@@ -6,5 +6,5 @@ CXX_DEFINES = -Dmprpc_EXPORTS
 
 CXX_INCLUDES = -I/home/king/PROJECT_Cpp/RPC-0.0.0/src/include -I/home/king/PROJECT_Cpp/RPC-0.0.0/example
 
-CXX_FLAGS = -fPIC
+CXX_FLAGS = -g -fPIC
 

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/king/PROJECT_Cpp/RPC-0.0.0/src/include -I/home/king/PROJECT_Cpp/RPC-0.0.0/example
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

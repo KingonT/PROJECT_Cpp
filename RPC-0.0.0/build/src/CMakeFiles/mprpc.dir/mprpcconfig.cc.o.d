@@ -1,7 +1,6 @@
-src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o: \
- /home/king/PROJECT_Cpp/RPC-0.0.0/src/mprpcapplication.cc \
+src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o: \
+ /home/king/PROJECT_Cpp/RPC-0.0.0/src/mprpcconfig.cc \
  /usr/include/stdc-predef.h \
- /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/mprpcapplication.h \
  /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/mprpcconfig.h \
  /usr/include/c++/9/unordered_map /usr/include/c++/9/type_traits \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -132,15 +131,9 @@ src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o: \
  /usr/include/c++/9/bits/uses_allocator.h \
  /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/limits \
  /usr/include/c++/9/bits/unordered_map.h \
- /usr/include/c++/9/bits/erase_if.h /usr/include/c++/9/stdlib.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/c++/9/iostream /usr/include/c++/9/ostream \
- /usr/include/c++/9/ios /usr/include/c++/9/bits/ios_base.h \
+ /usr/include/c++/9/bits/erase_if.h /usr/include/c++/9/iostream \
+ /usr/include/c++/9/ostream /usr/include/c++/9/ios \
+ /usr/include/c++/9/bits/ios_base.h \
  /usr/include/c++/9/bits/locale_classes.h \
  /usr/include/c++/9/bits/locale_classes.tcc \
  /usr/include/c++/9/system_error \

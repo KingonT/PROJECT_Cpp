@@ -235,4 +235,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: \
  /usr/local/protobuf/include/google/protobuf/map_type_handler.h \
  /usr/local/protobuf/include/google/protobuf/extension_set.h \
  /usr/include/c++/9/cassert \
- /usr/local/protobuf/include/google/protobuf/service.h
+ /usr/local/protobuf/include/google/protobuf/service.h \
+ /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/mprpcapplication.h \
+ /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/mprpcconfig.h \
+ /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/rpcprovider.h
