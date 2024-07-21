@@ -34,5 +34,7 @@ private:
 
     std::unordered_map<std::string , ServiceInfo>   m_servicemap;
 
+private:
+    void SendMessage(const muduo::net::TcpConnectionPtr& ,google::protobuf::Message* );
 
 };

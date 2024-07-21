@@ -285,4 +285,46 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/c++/9/bits/std_mutex.h \
  /usr/include/c++/9/bits/unique_lock.h \
  /usr/local/protobuf/include/google/protobuf/stubs/once.h \
- /usr/local/protobuf/include/google/protobuf/port.h
+ /usr/local/protobuf/include/google/protobuf/port.h \
+ /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/rpcheader.pb.h \
+ /usr/local/protobuf/include/google/protobuf/io/coded_stream.h \
+ /usr/include/c++/9/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/local/protobuf/include/google/protobuf/stubs/strutil.h \
+ /usr/local/protobuf/include/google/protobuf/arena.h \
+ /usr/local/protobuf/include/google/protobuf/arena_impl.h \
+ /usr/local/protobuf/include/google/protobuf/arenaz_sampler.h \
+ /usr/local/protobuf/include/google/protobuf/arenastring.h \
+ /usr/local/protobuf/include/google/protobuf/explicitly_constructed.h \
+ /usr/local/protobuf/include/google/protobuf/generated_message_util.h \
+ /usr/local/protobuf/include/google/protobuf/any.h \
+ /usr/local/protobuf/include/google/protobuf/message_lite.h \
+ /usr/local/protobuf/include/google/protobuf/metadata_lite.h \
+ /usr/local/protobuf/include/google/protobuf/has_bits.h \
+ /usr/local/protobuf/include/google/protobuf/implicit_weak_message.h \
+ /usr/local/protobuf/include/google/protobuf/repeated_field.h \
+ /usr/local/protobuf/include/google/protobuf/repeated_ptr_field.h \
+ /usr/local/protobuf/include/google/protobuf/wire_format_lite.h \
+ /usr/local/protobuf/include/google/protobuf/stubs/casts.h \
+ /usr/local/protobuf/include/google/protobuf/generated_message_reflection.h \
+ /usr/local/protobuf/include/google/protobuf/generated_enum_reflection.h \
+ /usr/local/protobuf/include/google/protobuf/generated_enum_util.h \
+ /usr/local/protobuf/include/google/protobuf/unknown_field_set.h \
+ /usr/local/protobuf/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
+ /usr/local/protobuf/include/google/protobuf/io/zero_copy_stream.h \
+ /usr/local/protobuf/include/google/protobuf/stubs/stl_util.h \
+ /usr/local/protobuf/include/google/protobuf/parse_context.h \
+ /usr/local/protobuf/include/google/protobuf/endian.h \
+ /usr/local/protobuf/include/google/protobuf/inlined_string_field.h \
+ /usr/local/protobuf/include/google/protobuf/message.h \
+ /usr/local/protobuf/include/google/protobuf/map.h \
+ /usr/local/protobuf/include/google/protobuf/map_type_handler.h \
+ /usr/local/protobuf/include/google/protobuf/extension_set.h \
+ /usr/include/c++/9/cassert
