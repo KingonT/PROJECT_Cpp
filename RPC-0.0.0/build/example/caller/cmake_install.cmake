@@ -1,4 +1,4 @@
-# Install script for directory: /home/king/PROJECT_Cpp/RPC-0.0.0/example/callee
+# Install script for directory: /home/king/PROJECT_Cpp/RPC-0.0.0/example/caller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

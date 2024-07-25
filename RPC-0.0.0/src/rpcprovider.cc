@@ -14,8 +14,8 @@ void RpcProvider::NotifyService(google::protobuf::Service* service)
     // 获取服务对象service的方法数量
     int methodCnt = pserviceDesc->method_count();
     
-    std::cout<<"service_name:"<<sername<< "\n";
-    std::cout<<"methcount:"<<methodCnt<< "\n";
+    // std::cout<<"service_name:"<<sername<< "\n";
+    // std::cout<<"methcount:"<<methodCnt<< "\n";
 
     for(int i=0; i< methodCnt ; i++)
     {

@@ -4,6 +4,8 @@
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/message.h"
 #include "google/protobuf/stubs/callback.h"
+#include "mprpcapplication.h"
+#include "rpcheader.pb.h"
 #include <string>
 #include <iostream>   
 

@@ -139,8 +139,21 @@ provider: cmake_check_build_system
 
 # fast build rule for target.
 provider/fast:
-	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/provider.dir/build.make example/caller/CMakeFiles/provider.dir/build
+	$(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
 .PHONY : provider/fast
+
+#=============================================================================
+# Target rules for targets named conserum
+
+# Build rule for target.
+conserum: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 conserum
+.PHONY : conserum
+
+# fast build rule for target.
+conserum/fast:
+	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/conserum.dir/build.make example/caller/CMakeFiles/conserum.dir/build
+.PHONY : conserum/fast
 
 # Help Target
 help:
@@ -150,6 +163,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... conserum"
 	@echo "... mprpc"
 	@echo "... provider"
 .PHONY : help

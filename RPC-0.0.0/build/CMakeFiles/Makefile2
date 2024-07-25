@@ -81,22 +81,40 @@ clean: example/clean
 # Directory level rules for directory example
 
 # Recursive "all" directory target.
+example/all: example/callee/all
 example/all: example/caller/all
 .PHONY : example/all
 
 # Recursive "preinstall" directory target.
+example/preinstall: example/callee/preinstall
 example/preinstall: example/caller/preinstall
 .PHONY : example/preinstall
 
 # Recursive "clean" directory target.
+example/clean: example/callee/clean
 example/clean: example/caller/clean
 .PHONY : example/clean
+
+#=============================================================================
+# Directory level rules for directory example/callee
+
+# Recursive "all" directory target.
+example/callee/all: example/callee/CMakeFiles/provider.dir/all
+.PHONY : example/callee/all
+
+# Recursive "preinstall" directory target.
+example/callee/preinstall:
+.PHONY : example/callee/preinstall
+
+# Recursive "clean" directory target.
+example/callee/clean: example/callee/CMakeFiles/provider.dir/clean
+.PHONY : example/callee/clean
 
 #=============================================================================
 # Directory level rules for directory example/caller
 
 # Recursive "all" directory target.
-example/caller/all: example/caller/CMakeFiles/provider.dir/all
+example/caller/all: example/caller/CMakeFiles/conserum.dir/all
 .PHONY : example/caller/all
 
 # Recursive "preinstall" directory target.
@@ -104,7 +122,7 @@ example/caller/preinstall:
 .PHONY : example/caller/preinstall
 
 # Recursive "clean" directory target.
-example/caller/clean: example/caller/CMakeFiles/provider.dir/clean
+example/caller/clean: example/caller/CMakeFiles/conserum.dir/clean
 .PHONY : example/caller/clean
 
 #=============================================================================
@@ -129,7 +147,7 @@ src/clean: src/CMakeFiles/mprpc.dir/clean
 src/CMakeFiles/mprpc.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target mprpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target mprpc"
 .PHONY : src/CMakeFiles/mprpc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -149,30 +167,56 @@ src/CMakeFiles/mprpc.dir/clean:
 .PHONY : src/CMakeFiles/mprpc.dir/clean
 
 #=============================================================================
-# Target rules for target example/caller/CMakeFiles/provider.dir
+# Target rules for target example/callee/CMakeFiles/provider.dir
 
 # All Build rule for target.
-example/caller/CMakeFiles/provider.dir/all: src/CMakeFiles/mprpc.dir/all
-	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/provider.dir/build.make example/caller/CMakeFiles/provider.dir/depend
-	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/provider.dir/build.make example/caller/CMakeFiles/provider.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=7,8,9 "Built target provider"
-.PHONY : example/caller/CMakeFiles/provider.dir/all
+example/callee/CMakeFiles/provider.dir/all: src/CMakeFiles/mprpc.dir/all
+	$(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/depend
+	$(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=10,11,12 "Built target provider"
+.PHONY : example/callee/CMakeFiles/provider.dir/all
 
 # Build rule for subdir invocation for target.
-example/caller/CMakeFiles/provider.dir/rule: cmake_check_build_system
+example/callee/CMakeFiles/provider.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/provider.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/callee/CMakeFiles/provider.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles 0
-.PHONY : example/caller/CMakeFiles/provider.dir/rule
+.PHONY : example/callee/CMakeFiles/provider.dir/rule
 
 # Convenience name for target.
-provider: example/caller/CMakeFiles/provider.dir/rule
+provider: example/callee/CMakeFiles/provider.dir/rule
 .PHONY : provider
 
 # clean rule for target.
-example/caller/CMakeFiles/provider.dir/clean:
-	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/provider.dir/build.make example/caller/CMakeFiles/provider.dir/clean
-.PHONY : example/caller/CMakeFiles/provider.dir/clean
+example/callee/CMakeFiles/provider.dir/clean:
+	$(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/clean
+.PHONY : example/callee/CMakeFiles/provider.dir/clean
+
+#=============================================================================
+# Target rules for target example/caller/CMakeFiles/conserum.dir
+
+# All Build rule for target.
+example/caller/CMakeFiles/conserum.dir/all: src/CMakeFiles/mprpc.dir/all
+	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/conserum.dir/build.make example/caller/CMakeFiles/conserum.dir/depend
+	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/conserum.dir/build.make example/caller/CMakeFiles/conserum.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=1,2,3 "Built target conserum"
+.PHONY : example/caller/CMakeFiles/conserum.dir/all
+
+# Build rule for subdir invocation for target.
+example/caller/CMakeFiles/conserum.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/conserum.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles 0
+.PHONY : example/caller/CMakeFiles/conserum.dir/rule
+
+# Convenience name for target.
+conserum: example/caller/CMakeFiles/conserum.dir/rule
+.PHONY : conserum
+
+# clean rule for target.
+example/caller/CMakeFiles/conserum.dir/clean:
+	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/conserum.dir/build.make example/caller/CMakeFiles/conserum.dir/clean
+.PHONY : example/caller/CMakeFiles/conserum.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -43,8 +43,6 @@ void MprpcConfig::LoadConfigFile(const char* configfile)
         substring(value);
 
         configMap_.insert({key,value});
-
-        std::cout<< key <<":"<< value << "\n";
     }
 
 }

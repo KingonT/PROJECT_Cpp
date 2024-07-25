@@ -10,8 +10,8 @@ class  UserServiceDerived :public fixbug::UserServices
 public:
     bool  Login(std::string name , std::string pwd)
     {
-        std::cout<<"name is:"<< name << std::endl;
-        std::cout<<"pwd is:"<< pwd  << std::endl;
+        std::cout<<"name:"<< name << std::endl;
+        std::cout<<"pwd:"<< pwd  << std::endl;
         return true;
     }
 
@@ -23,12 +23,12 @@ public:
         std::string name = request->name();
         std::string pwd = request->pwd();
 
-        Login(name,pwd);
+        bool login_result =  Login(name,pwd);
 
         fixbug::ResaultCode* code = response->mutable_result();
         code->set_errcode(0);
         code->set_errmsg("");
-        response->set_success(1); 
+        response->set_success(login_result); 
         done->Run();
     }
 

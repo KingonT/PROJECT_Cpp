@@ -11,18 +11,18 @@ int main(int argc, char* argv[])
     // stub.CallMethod()
     
     fixbug::LoginRequest  request;
-    request.set_name("xiaobideng");
-    request.set_pwd(124345);
+    request.set_name("wo cao");
+    request.set_pwd("123456");
 
     fixbug::LoginResponse   response;
     stub.Login(nullptr,&request,&response,nullptr);
     if(!response.success())
     {
         std::cout << response.result().errmsg() << "\n";
-        return;
+        return 0;
     }
     // here success 
-
+    std::cout << "response.success:"<< response.success() << "\n";
 
     return 0;
 }

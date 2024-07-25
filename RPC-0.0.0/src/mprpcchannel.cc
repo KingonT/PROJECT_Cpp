@@ -1,8 +1,11 @@
 #include "mprpcchannel.h"
-#include "rpcheader.pb.h"
 #include <sys/types.h>          /* See NOTES */
 #include <sys/socket.h>              
 #include <cerrno>
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <unistd.h>
+#include <cstdio>
 
 void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
                                 google::protobuf::RpcController* controller, 
@@ -10,13 +13,13 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
                                 google::protobuf::Message* response, 
                                 google::protobuf::Closure* done)
 {
-    std::string method_name =  method->name();                                 
     const google::protobuf::ServiceDescriptor * pser =  method->service();
+    std::string method_name =  method->name();                                 
     std::string service_name = pser->name();
 
     /*  headersize + header + argssize + argsstr    */
     std::string argsstr;
-    uint32_t    argssize;
+    uint32_t    argssize = 0;
     if(!request->SerializeToString(&argsstr))   
     {
         std::cout <<"SerializetoString failed! :"<< argsstr<<"\n";
@@ -30,20 +33,18 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     rpcheader.set_argsize(argssize);
 
     std::string     headerstr;
-    uint32_t        headerstrsize;
-    if(!rpcheader.SerializePartialToString(&headerstr));                                                           
+    if(!rpcheader.SerializeToString(&headerstr))                                                         
     {
         std::cout <<"serialize header failed!\n";
+        std::cout << rpcheader.service_name()<<":"<< rpcheader.method_name()<<":"<< rpcheader.argsize()<< "\n";
         return ;
     }
-    headerstrsize = headerstr.size();
+    uint32_t headerstrsize = headerstr.size();
 
-    std::string headersize((char*)&headerstrsize ,sizeof(uint32_t));
-
-    sendstring += headersize;
+    sendstring.insert(0, reinterpret_cast<char*>(&headerstrsize) , sizeof(headerstrsize));
     sendstring += headerstr;
-    sendstring += argssize;
-
+    sendstring += argsstr;
+printf("%s",sendstring.c_str());
     // tcp coding..
     int fd = socket(AF_INET,SOCK_STREAM,0);
     if(-1 == fd)
@@ -52,7 +53,47 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         exit(EXIT_FAILURE);
     }    
 
-    
+    // 读取配置文件
+    std::string  ip = mprpcApplication::GetConfig().FindConfig("rpcserviceip");
+    uint32_t   port = atoi(mprpcApplication::GetConfig().FindConfig("rpcserviceport").c_str());
+
+    struct sockaddr_in  addrin;
+    addrin.sin_family = AF_INET;
+    addrin.sin_port = htons(port);
+    addrin.sin_addr.s_addr = inet_addr(ip.c_str());
+
+    int ret = connect(fd,(struct sockaddr*)&addrin, sizeof(addrin));
+    if(ret == -1)
+    {
+        std::cout <<"connect Failed!"<< strerror(errno) << "\n";
+        exit(EXIT_FAILURE);
+    }
+
+    ssize_t size =  send(fd, sendstring.c_str(), sendstring.size(), 0);
+    if(size == -1)
+    {
+        std::cout<< "send failed!" << strerror(errno) << "\n";
+        close(fd);
+        return ;
+    }
+
+    char buffer[1024];
+    size = recv(fd,buffer,sizeof(buffer),0);
+    if(size == -1)
+    {
+        std::cout<< "send failed!" << strerror(errno) << "\n";
+        close(fd);
+        return ;
+    }
+
+    if(!response->ParseFromArray(buffer, size ))
+    {
+        std::cout<< "reponse parse failed!" << "\n";
+        close(fd);
+        return ;       
+    }
+
+    close(fd);
 } 
 
 

@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.0/CMakeSystem.cmake"
   "/home/king/PROJECT_Cpp/RPC-0.0.0/example/CMakeLists.txt"
   "/home/king/PROJECT_Cpp/RPC-0.0.0/example/callee/CMakeLists.txt"
+  "/home/king/PROJECT_Cpp/RPC-0.0.0/example/caller/CMakeLists.txt"
   "/home/king/PROJECT_Cpp/RPC-0.0.0/src/CMakeLists.txt"
   "/usr/local/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in"
   "/usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c"
@@ -128,11 +129,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "example/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "example/callee/CMakeFiles/CMakeDirectoryInformation.cmake"
   "example/caller/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/mprpc.dir/DependInfo.cmake"
-  "example/caller/CMakeFiles/provider.dir/DependInfo.cmake"
+  "example/callee/CMakeFiles/provider.dir/DependInfo.cmake"
+  "example/caller/CMakeFiles/conserum.dir/DependInfo.cmake"
   )
