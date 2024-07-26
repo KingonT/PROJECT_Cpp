@@ -3,7 +3,7 @@
 #include  "user.pb.h"  
 #include  "mprpcapplication.h"
 #include  "rpcprovider.h"
-
+#include  "logger.h"
 
 class  UserServiceDerived :public fixbug::UserServices
 {
@@ -12,6 +12,11 @@ public:
     {
         std::cout<<"name:"<< name << std::endl;
         std::cout<<"pwd:"<< pwd  << std::endl;
+        return true;
+    }
+
+    bool  Register(uint32_t id , std::string name, std::string pwd)
+    {
         return true;
     }
 
@@ -32,11 +37,25 @@ public:
         done->Run();
     }
 
+
+    virtual void Register(google::protobuf::RpcController* controller,
+                       const ::fixbug::RegisterRequest* request,
+                       ::fixbug::RegisterResponse* response,
+                       ::google::protobuf::Closure* done)
+    {
+        bool ret_bool = Register(request->id(),request->name(),request->pwd());
+        response->mutable_result()->set_errcode(0);
+        response->mutable_result()->set_errmsg("");
+        response->set_success(ret_bool);
+        done->Run();
+    }
+
 };
 
 
 int main(int argc ,char* argv[])
 {
+    LOG_INFO("start now");
     mprpcApplication::Init(argc,argv);
 
     // provdier 是一个rpc网络服务对象。把UserServiceDerived对象发布到rpc节点上

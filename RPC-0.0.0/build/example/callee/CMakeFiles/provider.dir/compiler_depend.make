@@ -301,6 +301,8 @@ example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o: /home/king/PROJECT_Cpp/R
 
 example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/RPC-0.0.0/example/callee/userservice.cc \
   /home/king/PROJECT_Cpp/RPC-0.0.0/example/user.pb.h \
+  /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/lockqueue.h \
+  /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/logger.h \
   /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/mprpcapplication.h \
   /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/mprpcconfig.h \
   /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/rpcprovider.h \
@@ -380,6 +382,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
   /usr/include/c++/9/bits/cpp_type_traits.h \
   /usr/include/c++/9/bits/cxxabi_forced.h \
   /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/bits/deque.tcc \
   /usr/include/c++/9/bits/erase_if.h \
   /usr/include/c++/9/bits/exception.h \
   /usr/include/c++/9/bits/exception_defines.h \
@@ -418,6 +421,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
   /usr/include/c++/9/bits/stl_algobase.h \
   /usr/include/c++/9/bits/stl_bvector.h \
   /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/bits/stl_deque.h \
   /usr/include/c++/9/bits/stl_function.h \
   /usr/include/c++/9/bits/stl_heap.h \
   /usr/include/c++/9/bits/stl_iterator.h \
@@ -427,6 +431,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
   /usr/include/c++/9/bits/stl_multimap.h \
   /usr/include/c++/9/bits/stl_multiset.h \
   /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/stl_queue.h \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/bits/stl_relops.h \
   /usr/include/c++/9/bits/stl_set.h \
@@ -451,6 +456,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
   /usr/include/c++/9/chrono \
   /usr/include/c++/9/climits \
   /usr/include/c++/9/clocale \
+  /usr/include/c++/9/condition_variable \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cstdint \
   /usr/include/c++/9/cstdio \
@@ -462,6 +468,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
   /usr/include/c++/9/cxxabi.h \
   /usr/include/c++/9/debug/assertions.h \
   /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/deque \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/ext/aligned_buffer.h \
   /usr/include/c++/9/ext/alloc_traits.h \
@@ -484,6 +491,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
   /usr/include/c++/9/mutex \
   /usr/include/c++/9/new \
   /usr/include/c++/9/ostream \
+  /usr/include/c++/9/queue \
   /usr/include/c++/9/ratio \
   /usr/include/c++/9/set \
   /usr/include/c++/9/stdexcept \
@@ -491,6 +499,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
   /usr/include/c++/9/streambuf \
   /usr/include/c++/9/string \
   /usr/include/c++/9/system_error \
+  /usr/include/c++/9/thread \
   /usr/include/c++/9/tuple \
   /usr/include/c++/9/type_traits \
   /usr/include/c++/9/typeinfo \
@@ -696,8 +705,6 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 
 /usr/local/include/muduo/net/Buffer.h:
 
-/usr/local/include/muduo/base/noncopyable.h:
-
 /usr/local/include/muduo/base/copyable.h:
 
 /usr/local/include/muduo/base/Types.h:
@@ -732,7 +739,15 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 
 /usr/include/linux/posix_types.h:
 
+/usr/include/c++/9/queue:
+
 /usr/include/c++/9/cxxabi.h:
+
+/usr/local/include/muduo/base/noncopyable.h:
+
+/usr/include/c++/9/condition_variable:
+
+/usr/include/c++/9/bits/deque.tcc:
 
 /usr/include/boost/version.hpp:
 
@@ -793,6 +808,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 /usr/local/include/muduo/base/StringPiece.h:
 
 /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/mprpcapplication.h:
+
+/home/king/PROJECT_Cpp/RPC-0.0.0/src/include/lockqueue.h:
 
 /home/king/PROJECT_Cpp/RPC-0.0.0/example/callee/userservice.cc:
 
@@ -914,6 +931,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 
 /usr/include/c++/9/bits/erase_if.h:
 
+/home/king/PROJECT_Cpp/RPC-0.0.0/src/include/logger.h:
+
 /usr/include/c++/9/bits/vector.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
@@ -1029,6 +1048,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 /usr/include/c++/9/bits/cpp_type_traits.h:
 
 /usr/include/c++/9/bits/locale_facets.tcc:
+
+/usr/include/c++/9/bits/stl_queue.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
@@ -1170,6 +1191,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
 
+/usr/include/c++/9/deque:
+
 /usr/include/c++/9/bits/unique_lock.h:
 
 /usr/include/wchar.h:
@@ -1299,6 +1322,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 /usr/include/sched.h:
 
 /usr/include/stdio.h:
+
+/usr/include/c++/9/bits/stl_deque.h:
 
 /usr/include/c++/9/bits/stl_bvector.h:
 
@@ -1443,6 +1468,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/king/PROJECT_Cpp/
 /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h:
+
+/usr/include/c++/9/thread:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h:
 
