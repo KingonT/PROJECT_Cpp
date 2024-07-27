@@ -2,7 +2,7 @@
 #include "zookeeper/zookeeper.h"
 #include <semaphore.h>
 #include <string>
-
+#include "mprpcapplication.h"
 
 class ZkClient
 {

@@ -139,10 +139,24 @@ src/CMakeFiles/mprpc.dir/mprpccontroller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mprpc.dir/mprpccontroller.cc.s"
 	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/king/PROJECT_Cpp/RPC-0.0.0/src/mprpccontroller.cc -o CMakeFiles/mprpc.dir/mprpccontroller.cc.s
 
+src/CMakeFiles/mprpc.dir/mprpcprovider.cc.o: src/CMakeFiles/mprpc.dir/flags.make
+src/CMakeFiles/mprpc.dir/mprpcprovider.cc.o: /home/king/PROJECT_Cpp/RPC-0.0.0/src/mprpcprovider.cc
+src/CMakeFiles/mprpc.dir/mprpcprovider.cc.o: src/CMakeFiles/mprpc.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/mprpc.dir/mprpcprovider.cc.o"
+	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/mprpc.dir/mprpcprovider.cc.o -MF CMakeFiles/mprpc.dir/mprpcprovider.cc.o.d -o CMakeFiles/mprpc.dir/mprpcprovider.cc.o -c /home/king/PROJECT_Cpp/RPC-0.0.0/src/mprpcprovider.cc
+
+src/CMakeFiles/mprpc.dir/mprpcprovider.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mprpc.dir/mprpcprovider.cc.i"
+	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/king/PROJECT_Cpp/RPC-0.0.0/src/mprpcprovider.cc > CMakeFiles/mprpc.dir/mprpcprovider.cc.i
+
+src/CMakeFiles/mprpc.dir/mprpcprovider.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mprpc.dir/mprpcprovider.cc.s"
+	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/king/PROJECT_Cpp/RPC-0.0.0/src/mprpcprovider.cc -o CMakeFiles/mprpc.dir/mprpcprovider.cc.s
+
 src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o: src/CMakeFiles/mprpc.dir/flags.make
 src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o: /home/king/PROJECT_Cpp/RPC-0.0.0/src/rpcheader.pb.cc
 src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o: src/CMakeFiles/mprpc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o"
 	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -MF CMakeFiles/mprpc.dir/rpcheader.pb.cc.o.d -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -c /home/king/PROJECT_Cpp/RPC-0.0.0/src/rpcheader.pb.cc
 
 src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.i: cmake_force
@@ -152,20 +166,6 @@ src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.i: cmake_force
 src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mprpc.dir/rpcheader.pb.cc.s"
 	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/king/PROJECT_Cpp/RPC-0.0.0/src/rpcheader.pb.cc -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.s
-
-src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: src/CMakeFiles/mprpc.dir/flags.make
-src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: /home/king/PROJECT_Cpp/RPC-0.0.0/src/rpcprovider.cc
-src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: src/CMakeFiles/mprpc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/king/PROJECT_Cpp/RPC-0.0.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/mprpc.dir/rpcprovider.cc.o"
-	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/mprpc.dir/rpcprovider.cc.o -MF CMakeFiles/mprpc.dir/rpcprovider.cc.o.d -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/king/PROJECT_Cpp/RPC-0.0.0/src/rpcprovider.cc
-
-src/CMakeFiles/mprpc.dir/rpcprovider.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mprpc.dir/rpcprovider.cc.i"
-	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/king/PROJECT_Cpp/RPC-0.0.0/src/rpcprovider.cc > CMakeFiles/mprpc.dir/rpcprovider.cc.i
-
-src/CMakeFiles/mprpc.dir/rpcprovider.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mprpc.dir/rpcprovider.cc.s"
-	cd /home/king/PROJECT_Cpp/RPC-0.0.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/king/PROJECT_Cpp/RPC-0.0.0/src/rpcprovider.cc -o CMakeFiles/mprpc.dir/rpcprovider.cc.s
 
 src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o: src/CMakeFiles/mprpc.dir/flags.make
 src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o: /home/king/PROJECT_Cpp/RPC-0.0.0/src/zookeeperutil.cc
@@ -188,8 +188,8 @@ mprpc_OBJECTS = \
 "CMakeFiles/mprpc.dir/mprpcchannel.cc.o" \
 "CMakeFiles/mprpc.dir/mprpcconfig.cc.o" \
 "CMakeFiles/mprpc.dir/mprpccontroller.cc.o" \
+"CMakeFiles/mprpc.dir/mprpcprovider.cc.o" \
 "CMakeFiles/mprpc.dir/rpcheader.pb.cc.o" \
-"CMakeFiles/mprpc.dir/rpcprovider.cc.o" \
 "CMakeFiles/mprpc.dir/zookeeperutil.cc.o"
 
 # External object files for target mprpc
@@ -200,8 +200,8 @@ mprpc_EXTERNAL_OBJECTS =
 /home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o
 /home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o
 /home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o
+/home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/mprpcprovider.cc.o
 /home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o
-/home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/rpcprovider.cc.o
 /home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o
 /home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/build.make
 /home/king/PROJECT_Cpp/RPC-0.0.0/lib/libmprpc.a: src/CMakeFiles/mprpc.dir/link.txt

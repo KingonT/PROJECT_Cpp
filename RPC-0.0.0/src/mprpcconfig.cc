@@ -39,7 +39,10 @@ void MprpcConfig::LoadConfigFile(const char* configfile)
         substring(key);
 
         std::string  value = dst_string.substr(index+1 , dst_string.size()-index-1);
-        value[value.size()-1] = 0;
+        size_t pos =  value.find('\n');
+        if(pos != -1)  {
+            value.erase(pos,1);
+        }      
         substring(value);
 
         configMap_.insert({key,value});

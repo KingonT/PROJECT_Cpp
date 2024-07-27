@@ -6,6 +6,7 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <cstdio>
+#include "zookeeperutil.h"
 
 void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
                                 google::protobuf::RpcController* controller, 
@@ -53,9 +54,29 @@ printf("%s",sendstring.c_str());
         exit(EXIT_FAILURE);
     }    
 
-    // 读取配置文件
-    std::string  ip = mprpcApplication::GetConfig().FindConfig("rpcserviceip");
-    uint32_t   port = atoi(mprpcApplication::GetConfig().FindConfig("rpcserviceport").c_str());
+    // 读取配置文件  
+    // std::string  ip = mprpcApplication::GetConfig().FindConfig("rpcserviceip");
+    // uint32_t   port = atoi(mprpcApplication::GetConfig().FindConfig("rpcserviceport").c_str());
+
+    // 改为从配置中心zookeeper 读取服务IP和端口
+    ZkClient    zkcli;
+    zkcli.Start();
+    std::string  path = "/" + service_name + "/" + method_name;
+    std::string  ip_port =  zkcli.GetData(path.c_str());
+    if(ip_port.size() == 0)
+    {
+        std::cout << "zkclient get path data failed!. \n";
+        return ;
+    }
+    size_t pos = ip_port.find(":");
+    if(pos == std::string::npos)
+    {
+        std::cout<<"\" : \" not find.\n";
+        return ;
+    }
+    std::string  ip = ip_port.substr(0,pos);
+    uint16_t  port = atoi(ip_port.substr(pos+1).c_str());
+
 
     struct sockaddr_in  addrin;
     addrin.sin_family = AF_INET;

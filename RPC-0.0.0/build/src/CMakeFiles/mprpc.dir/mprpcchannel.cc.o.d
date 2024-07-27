@@ -266,4 +266,12 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /home/king/PROJECT_Cpp/RPC-0.0.0/src/include/zookeeperutil.h \
+ /usr/local/zookeeper/include/zookeeper/zookeeper.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /usr/local/zookeeper/include/zookeeper/proto.h \
+ /usr/local/zookeeper/include/zookeeper/zookeeper_version.h \
+ /usr/local/zookeeper/include/zookeeper/recordio.h \
+ /usr/local/zookeeper/include/zookeeper/zookeeper.jute.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h
